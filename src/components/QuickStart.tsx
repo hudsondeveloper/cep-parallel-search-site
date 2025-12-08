@@ -53,6 +53,19 @@ const result = await searchCep('01310100', {
   useCache: true
 });`;
 
+  const validationExample = `const { isValidCep } = require('cep-parallel-search');
+
+// Validar CEP válido sem hífen
+isValidCep('92500000'); // true
+
+// Validar CEP válido com hífen
+isValidCep('92500-000'); // true
+
+// CEPs inválidos
+isValidCep('8434850001'); // false (mais de 8 dígitos)
+isValidCep('12345'); // false (menos de 8 dígitos)
+isValidCep('abc12345'); // false (contém letras)`;
+
   return (
     <div className="relative py-24 px-6 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent">
       <div className="max-w-6xl mx-auto">
@@ -136,6 +149,31 @@ const result = await searchCep('01310100', {
               <div className="p-6 overflow-x-auto">
                 <pre className="text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
                   <code>{advancedExample}</code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          {/* Validation Example */}
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
+            <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+                <span className="text-sm font-medium text-slate-300">Validação de CEP</span>
+                <button
+                  onClick={() => copyCode(validationExample, 'validation')}
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
+                >
+                  {copied === 'validation' ? (
+                    <Check className="w-4 h-4 text-green-400" />
+                  ) : (
+                    <Copy className="w-4 h-4 text-slate-400" />
+                  )}
+                </button>
+              </div>
+              <div className="p-6 overflow-x-auto">
+                <pre className="text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
+                  <code>{validationExample}</code>
                 </pre>
               </div>
             </div>

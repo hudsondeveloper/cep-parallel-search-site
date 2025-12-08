@@ -8,11 +8,6 @@ import { ghPages } from "vite-plugin-gh-pages";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(),ghPages()],
-  // resolve: {
-  //   alias: {
-  //     "@": path.resolve(__dirname, "./src"),
-  //   },
-  // },
   //base: '/cep-parallel-search-site/',
   base: '/cep-parallel-search-site',
   server: {

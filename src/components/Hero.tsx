@@ -1,4 +1,5 @@
 import { Zap, Github, Book } from 'lucide-react';
+import CepSearch from './CepSearch';
 
 export default function Hero() {
   return (
@@ -26,6 +27,11 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
             Biblioteca Node.js profissional para busca de CEP com múltiplas consultas em paralelo, cache automático e alta disponibilidade
           </p>
+
+          {/* CEP Search Component */}
+          <div className="mb-16">
+            <CepSearch />
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

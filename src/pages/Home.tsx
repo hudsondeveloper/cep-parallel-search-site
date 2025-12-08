@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Installation from '../components/Installation';
 import QuickStart from '../components/QuickStart';
+import CepValidator from '../components/CepValidator';
 import Services from '../components/Services';
 import CodeExamples from '../components/CodeExamples';
 import Footer from '../components/Footer';
@@ -21,6 +22,7 @@ export default function Home() {
       <Features />
       <Installation />
       <QuickStart />
+      <CepValidator />
       <Services />
       <CodeExamples />
       <Footer />

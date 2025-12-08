@@ -64,6 +64,41 @@ async function buscar(cep: string): Promise<CepResult | null> {
   }
 }`;
 
+  const validationExample = `const { isValidCep, searchCep } = require('cep-parallel-search');
+
+// Validação rápida de formato (sem requisição HTTP)
+function validarFormatoCep(cep) {
+  return isValidCep(cep);
+}
+
+// Validação completa (formato + existência)
+async function validarCepCompleto(cep) {
+  // Primeiro valida o formato
+  if (!isValidCep(cep)) {
+    return {
+      valido: false,
+      motivo: 'Formato inválido',
+      erro: 'CEP deve conter exatamente 8 dígitos numéricos'
+    };
+  }
+  
+  // Depois verifica se existe
+  try {
+    const result = await searchCep(cep);
+    return {
+      valido: true,
+      existe: true,
+      dados: result
+    };
+  } catch (error) {
+    return {
+      valido: true, // Formato válido
+      existe: false, // Mas não existe na base de dados
+      motivo: 'CEP não encontrado'
+    };
+  }
+}`;
+
   const examples = [
     {
       id: 'cache',
@@ -78,6 +113,13 @@ async function buscar(cep: string): Promise<CepResult | null> {
       description: 'Classes de erro específicas para cada situação',
       code: errorExample,
       gradient: 'from-blue-600 to-cyan-600'
+    },
+    {
+      id: 'validation',
+      title: 'Validação de CEP',
+      description: 'Valida formato e existência de CEP',
+      code: validationExample,
+      gradient: 'from-green-600 to-emerald-600'
     },
     {
       id: 'multiple',
