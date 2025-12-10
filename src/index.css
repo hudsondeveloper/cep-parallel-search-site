@@ -11,3 +11,26 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Melhorias para mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Garantir que elementos não ultrapassem a largura da tela */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Melhorar legibilidade em mobile */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+}

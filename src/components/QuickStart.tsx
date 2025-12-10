@@ -67,37 +67,37 @@ isValidCep('12345'); // false (menos de 8 dígitos)
 isValidCep('abc12345'); // false (contém letras)`;
 
   return (
-    <div className="relative py-24 px-6 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent">
+    <div className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
             Início Rápido
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto px-4">
             Exemplos práticos para você começar a usar agora
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {/* Basic Example */}
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
             <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-                <span className="text-sm font-medium text-slate-300">Uso Básico</span>
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10">
+                <span className="text-xs sm:text-sm font-medium text-slate-300">Uso Básico</span>
                 <button
                   onClick={() => copyCode(basicExample, 'basic')}
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
+                  className="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
                 >
                   {copied === 'basic' ? (
-                    <Check className="w-4 h-4 text-green-400" />
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400" />
                   ) : (
-                    <Copy className="w-4 h-4 text-slate-400" />
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400" />
                   )}
                 </button>
               </div>
-              <div className="p-6 overflow-x-auto">
-                <pre className="text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
+              <div className="p-4 sm:p-6 overflow-x-auto">
+                <pre className="text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
                   <code>{basicExample}</code>
                 </pre>
               </div>
@@ -108,21 +108,21 @@ isValidCep('abc12345'); // false (contém letras)`;
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
             <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-                <span className="text-sm font-medium text-slate-300">Com Async/Await</span>
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10">
+                <span className="text-xs sm:text-sm font-medium text-slate-300">Com Async/Await</span>
                 <button
                   onClick={() => copyCode(asyncExample, 'async')}
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
+                  className="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
                 >
                   {copied === 'async' ? (
-                    <Check className="w-4 h-4 text-green-400" />
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400" />
                   ) : (
-                    <Copy className="w-4 h-4 text-slate-400" />
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400" />
                   )}
                 </button>
               </div>
-              <div className="p-6 overflow-x-auto">
-                <pre className="text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
+              <div className="p-4 sm:p-6 overflow-x-auto">
+                <pre className="text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
                   <code>{asyncExample}</code>
                 </pre>
               </div>
@@ -133,21 +133,21 @@ isValidCep('abc12345'); // false (contém letras)`;
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
             <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-                <span className="text-sm font-medium text-slate-300">Uso Avançado</span>
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10">
+                <span className="text-xs sm:text-sm font-medium text-slate-300">Uso Avançado</span>
                 <button
                   onClick={() => copyCode(advancedExample, 'advanced')}
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
+                  className="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
                 >
                   {copied === 'advanced' ? (
-                    <Check className="w-4 h-4 text-green-400" />
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400" />
                   ) : (
-                    <Copy className="w-4 h-4 text-slate-400" />
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400" />
                   )}
                 </button>
               </div>
-              <div className="p-6 overflow-x-auto">
-                <pre className="text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
+              <div className="p-4 sm:p-6 overflow-x-auto">
+                <pre className="text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
                   <code>{advancedExample}</code>
                 </pre>
               </div>
@@ -158,21 +158,21 @@ isValidCep('abc12345'); // false (contém letras)`;
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
             <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-                <span className="text-sm font-medium text-slate-300">Validação de CEP</span>
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10">
+                <span className="text-xs sm:text-sm font-medium text-slate-300">Validação de CEP</span>
                 <button
                   onClick={() => copyCode(validationExample, 'validation')}
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
+                  className="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
                 >
                   {copied === 'validation' ? (
-                    <Check className="w-4 h-4 text-green-400" />
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400" />
                   ) : (
-                    <Copy className="w-4 h-4 text-slate-400" />
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400" />
                   )}
                 </button>
               </div>
-              <div className="p-6 overflow-x-auto">
-                <pre className="text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
+              <div className="p-4 sm:p-6 overflow-x-auto">
+                <pre className="text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Fira Code, monospace' }}>
                   <code>{validationExample}</code>
                 </pre>
               </div>
